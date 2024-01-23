@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!--  이 코드를 해석할 수 있어야 한다   -->
+
+
+	<bean id="aa" class="p2.BatteryAA">
+		<property name="energy" value="100" />	<!-- 값을 직접 지정해주고 싶으면 value 사용 -->
+	</bean>
+	
+	<bean id="toy" class="p2.Toy">
+		<constructor-arg ref="aa" />	<!--  이미 생성되어있는 객체를 참조하고 싶을 땐 ref 사용 -->
+	</bean>
+</beans>
+

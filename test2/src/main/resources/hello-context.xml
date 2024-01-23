@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- 	
+			<bean id="hello" class="p1.Hello">
+				:  <jsp:useBean id=""  class=""> 과 동일하게 객체를 생성하는 역할
+				
+				
+				
+			<property name="text" value="Hello Spring" />
+				:  <jsp:setProperty name="" property="" value="${param.userid}" />
+	-->
+	
+	
+	
+	
+	
+	<bean id="hello" class="p1.Hello">	
+		<property name="text" value="Hello Spring" />
+	</bean>
+	
+	<!-- 
+		p1 패키지의 Hello 클래스를 이용하여 스프링 빈을 생성한다
+		객체를 생성하면서, setter 를 이용하여 "Hello Spring" 문자열을 text 필드에 저장
+		hello.setText("Hello Spring")
+	 -->
+	
+	
+</beans>

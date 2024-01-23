@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context
+						http://www.springframework.org/schema/context/spring-context.xsd">
+
+	
+	<!-- base-package 에 지정한 패키지 내부의 모든 클래스를 스캔한다
+		스캔한 클래스 중에서 다음 어노테이션이 명시되어 있는 클래스를 스프링 빈으로 등록한다
+		기본 생성자가 있어야함
+		
+		다음 어노테이션 >>
+		@Controller,	@Service,	@Repository,	@Component .. 
+		
+		즉, 이런 어노테이션이 붙어있으면 
+		스프링이 알아서 스프링빈으로 등록시켜준다 
+		
+		이번엔 bean 태그를 안쓰고 객체를 생성함 
+		
+		내가 만드는 클래스는 bean 을 안쓰고 만들수 있다.
+		그 대신, 1) 스캔할 패키지명을 지정
+			   2) 스프링빈으로 바꿔주어야할 애들을 직접 어노테이션을 통해서 표시해두어야한다 !
+	 -->
+	<context:component-scan base-package="p3" />
+
+</beans>
